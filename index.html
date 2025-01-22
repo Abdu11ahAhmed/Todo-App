@@ -20,6 +20,7 @@
             let taskList = document.querySelector(".tasks");
             let input = document.querySelector(".input");
             let btn = document.querySelector(".add");
+            let counter = 1;
 
             btn.addEventListener("click", (event) => {
                 let valid = false;
@@ -36,7 +37,7 @@
                     button.textContent = "Delete";
                     // create a delete button
 
-                    list.textContent = input.value;
+                    list.textContent = ` ${counter++}- ${input.value} `;
                     list.appendChild(button);
                     // appending button before changing list text will override btn appending
 
@@ -53,10 +54,6 @@
                     // if empty disable button submit
                 }
             });
-
-
-            let tet= "df.dfk jdfkdjf";
-            console.log(tet.split(".")[1].trim())
         </script>
     </body>
 </html>
