@@ -1,71 +1,78 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.container {
-    width: fit-content;
-    height: fit-content;
-    margin: 100px auto;
-}
-.container .form {
-    position: relative;
-    padding: 20px;
-    background: #ebebeb;
-    border-radius: 10px;
-    margin: 0 0 20px 0;
-}
-.container .form .input {
-    height: 40px;
-    width: 100%;
-    width: 300px;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding: 0 20px;
-    margin: 0 5px 0 0;
-}
-.container .form .add {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 40px;
-    width: 100px;
-    outline: none;
-    border: none;
-    background-color: orange;
-    color: black;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 0 20px;
-}
-.container .tasks {
-    border-radius: 10px;
-    padding: 20px;
-    background: #ebebeb;
-}
-.container .tasks li {
-    height: 40px;
-    font-size: 14px;
-    padding: 5px 0 5px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    background: #ffffff;
-    margin-bottom: 10px;
-}
-.container .tasks li button {
-    height: 40px;
-    width: 100px;
-    outline: none;
-    border: none;
-    background: red;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 0 20px;
-    color: white;
-}
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: averta cy;
+            }
+            .game {
+                border: 1px solid black;
+                box-shadow: 2px 2px 0 black;
+                border-radius: 10px;
+                transition: 0.5s background;
+            }
+            .game:hover.active {
+                background: #ffd8d8;
+            }
+            .game:hover {
+                background: #b9ffd4;
+            }
+            .game:active {
+                transform: translate(2px, 2px);
+                box-shadow: none;
+            }
+            button {
+                user-select: none;
+                height: 40px;
+                width: 40px;
+                margin: 0 2px 0 10px;
+                cursor: pointer;
+            }
+            .container {
+                width: fit-content;
+                margin: 100px auto;
+                padding: 10px;
+                border: 1px solid black;
+                box-shadow: 2px 2px 0 black;
+                border-radius: 10px;
+            }
+            .container header input {
+                outline: none;
+                height: 40px;
+                width: 300px;
+                padding: 0 0 0 10px;
+            }
+            .container header input:hover {
+                background: unset;
+            }
+
+            ul {
+                margin: 0;
+                list-style: none;
+            }
+            ul li {
+                width: 100%;
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                margin: 10px 0 0 0;
+            }
+            ul li button.game:hover {
+                background: #ffd8d8;
+            }
+            p {
+                width: calc(100% - 52px);
+                height: 40px;
+                border: 1px solid red;
+                display: flex;
+                padding: 0 0 0 10px;
+                align-items: center;
+                font-size: 14px;
+            }
+            p.game:hover {
+                background: unset;
+            }
+            p.game:active {
+                background: unset;
+                transform: unset;
+                box-shadow: 2px 2px 0 black;
+            }
